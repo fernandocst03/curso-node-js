@@ -12,7 +12,7 @@ const processRequest = (req, res) => {
         case '/pokemon/ditto':
 
           res.setHeader('Content-Type', 'application/json; charset=utf-8')
-          return res.end(JSON.stringify(dittoJSON))
+          return res.end(JSON.stringify(dittoJSON)) // transoformamos el JSON en string
         default:
           res.statusCode = 404
           res.setHeader('Content-Type', 'text/html; charset=utf-8')

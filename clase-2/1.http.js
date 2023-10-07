@@ -14,7 +14,7 @@ const processRequest = (req, res) => {
         res.statusCode = 500
         res.end('<h1>500 Internal Server Error</h1>')
       } else {
-        res.setHeader('Content-Type', 'image/png')
+        res.setHeader('Content-Type', 'image/png') // indica el tipo de archvo que es 
         res.end(data)
       }
     })

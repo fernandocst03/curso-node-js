@@ -27,6 +27,7 @@ app.use(cors({
     return callback(new Error('Not allowed by CORS'))
   }
 }))
+
 app.disable('x-powered-by') // deshabilitar el header X-Powered-By: Express
 
 // métodos normales: GET/HEAD/POST
@@ -34,6 +35,10 @@ app.disable('x-powered-by') // deshabilitar el header X-Powered-By: Express
 
 // CORS PRE-Flight
 // OPTIONS
+
+app.get('/', (req, res) => {
+  res.json({ message: 'Hola' })
+})
 
 // Todos los recursos que sean MOVIES se identifica con /movies
 app.get('/movies', (req, res) => {

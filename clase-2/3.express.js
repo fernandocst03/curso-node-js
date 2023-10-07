@@ -2,13 +2,15 @@ const express = require('express')
 const ditto = require('./pokemon/ditto.json')
 const path = require('path')
 
-const PORT = process.env.PORT ?? 1234
+const PORT = process.env.PORT ?? 1234 // si no hay variable de entorno elige el puerto 1234 por default 
 
 const app = express()
+
 app.disable('x-powered-by')
 
 app.use(express.json())
 
+// middleware 
 // app.use((req, res, next) => {
 //   if (req.method !== 'POST') return next()
 //   if (req.headers['content-type'] !== 'application/json') return next()

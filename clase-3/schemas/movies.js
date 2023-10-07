@@ -21,12 +21,12 @@ const movieSchema = z.object({
   )
 })
 
-function validateMovie (input) {
-  return movieSchema.safeParse(input)
+function validateMovie(input) {
+  return movieSchema.safeParse(input) // devuelve un objeto result
 }
 
-function validatePartialMovie (input) {
-  return movieSchema.partial().safeParse(input)
+function validatePartialMovie(input) {
+  return movieSchema.partial().safeParse(input) // partial todos de cada una de las propiedades las haran opcionales
 }
 
 module.exports = {
